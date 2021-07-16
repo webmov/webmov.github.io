@@ -1,0 +1,88 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index_style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>Database</title>
+</head>
+
+<body>
+    <div class="search-bar">
+        <input class="search-txt" type="text" name="search" value="" autocomplete="off" id="myinput" onkeyup="searchFunction()"
+            placeholder="Search">
+        <a href="#" class="search-btn">
+            <i class="fas fa-search"></i>
+        </a>
+
+    </div>
+
+    <ul id="wrapper">
+        <li>
+            <a href="raw/Rogue One A Star Wars Story.html">Rogue One: A Star Wars Story (HINDI)</a>
+        </li>
+        <li>
+            <a href="raw/Solo A Star Wars Story.html">Solo: A Star Wars Story (HINDI)</a>
+        </li>
+        <li>
+            <a href="raw/Star Wars The Rise of Skywalker.html">Star Wars: The Rise of Skywalker (HINDI)</a>
+        </li>
+        <li>
+            <a href="raw/Star Wars Revenge of the Sith.html">Star Wars: Revenge of the Sith (Episode III) (HINDI)</a>
+        </li>
+        <li>
+            <a href="raw/Star Wars Episode IV - A New Hope.html">Star Wars: Episode IV - A New Hope (HINDI)</a>
+        </li>
+        <li>
+            <a href="raw/Star Wars Episode I – The Phantom Menace.html">Star Wars: Episode I – The Phantom Menace (HINDI)</a>
+        </li>
+        <li>
+            <a href="raw/Star Wars Episode II – Attack of the Clones.html">Star Wars: Episode II – Attack of the Clones (HINDI)</a>
+        </li>
+        <li>
+            <a href="raw/Star Wars The Empire Strikes Back.html">Star Wars: The Empire Strikes Back (HINDI)</a>
+        </li>
+        <li>
+            <a href="raw/Star Wars Return of the Jedi.html">Star Wars: Return of the Jedi (HINDI)</a>
+        </li>
+        <li>
+            <a href="raw/Star Wars The Force Awakens.html">Star Wars: The Force Awakens (HINDI)</a>
+        </li>
+        <li>
+            <a href="raw/Star Wars The Last Jedi.html">Star Wars: The Last Jedi (HINDI)</a>
+        </li>
+        <li>
+            <a href="raw/Into The Badlands.html">Into the Badlands Season (HINDI)</a>
+        </li>
+    </ul>
+
+
+
+
+
+    <script>
+        function searchFunction() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById('myinput');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById('wrapper');
+            li = ul.getElementsByTagName('li');
+
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName('a')[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                }
+
+                else {
+                    li[i].style.display = 'none';
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
